@@ -57,7 +57,7 @@ pub struct Trie<K, V> {
 }
 
 /// Immutable view of a sub-tree a larger trie.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct SubTrie<'a, K: 'a, V: 'a> {
     prefix: Nibblet,
     node: &'a TrieNode<K, V>,
